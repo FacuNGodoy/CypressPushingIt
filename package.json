@@ -1,0 +1,15 @@
+{
+  "name": "preentrega",
+  "version": "1.0.0",
+  "description": "Pre entrega Curso Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "author": "Facundo Godoy",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.14.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
