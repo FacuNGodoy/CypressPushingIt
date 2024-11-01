@@ -1,14 +1,14 @@
 {
-  "productos": [
-    {
-        "name": "Remera Negra",
-        "cantidad": 2,
-        "precioUnitario": 7.12
-    },
-    {
-        "name": "Zapatillas Azules",
-        "cantidad": 1,
-        "precioUnitario": 30.33
-    }
-]
+    "productos": [
+        {
+            "name": "Remera Negra",
+            "cantidad": 2,
+            "precioUnitario": 7.12
+        },
+        {
+            "name": "Medias Negras",
+            "cantidad": 1,
+            "precioUnitario": 5.43
+        }
+    ]
 }

@@ -11,6 +11,8 @@ module.exports = defineConfig({
   },
   env: {
     user: "pushingit",
-    password: "123456!"
+    password: "123456!",
+    token: null,
+    userId: null
   }
 });

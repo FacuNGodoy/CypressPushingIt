@@ -5,8 +5,7 @@ export class ShoppingCartPage {
     }
 
     valorTotalProducto(precioProducto, cantidadProducto) {
-        const totalProducto = precioProducto * cantidadProducto;
-        cy.get(`p#totalPrice`).should('contain', totalProducto);
+        cy.get(`p#totalPrice`).should('contain', `$${cantidadProducto * precioProducto}`);
     }
 
     valorTotalCarrito() {
@@ -35,6 +34,14 @@ export class ShoppingCartPage {
         this.valorNombreProducto(nombreProducto).siblings(`p`).should('contain', precioProducto);
         this.valorNombreProducto(nombreProducto).siblings(`p`).should('contain', cantidadProducto);
         this.valorTotalProducto(precioProducto, cantidadProducto);
+    }
+
+    botonGoToBillingSummary() {
+        return cy.get(`button[data-cy="goBillingSummary"]`);
+    }
+
+    botonGoToCheckout() {
+        return cy.get(`button[data-cy="goCheckout"]`);
     }
 
 }
