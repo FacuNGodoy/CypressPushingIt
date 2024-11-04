@@ -22,9 +22,8 @@ describe('Pre-Entrega Cypress', () => {
     })
 
     beforeEach('Abre el ambiente', () => {
-        loginPage.abrirPagina();
-        loginPage.iniciarSesion().dblclick();
-        loginPage.login(Cypress.env().user, Cypress.env().password);
+        loginPage.loginAPI(Cypress.env().user, Cypress.env().password);
+        cy.visit("");
     })
     
     it('Desafio', () => {
@@ -46,13 +45,13 @@ describe('Pre-Entrega Cypress', () => {
         shoppingCartPage.botonGoToBillingSummary().click();
         shoppingCartPage.botonGoToCheckout().click();
 
-        checkOutPage.formularioCheckOut("Facundo", "Godoy", "0123456789101112");
+        checkOutPage.formularioCheckOut(data.comprador.nombre, data.comprador.apellido, data.comprador.tarjeta);
         checkOutPage.botonConfirmarFormulario().click();
 
-        reciptPage.validarComprador("Facundo", "Godoy");
+        reciptPage.validarComprador(data.comprador.nombre, data.comprador.apellido);
         reciptPage.validarItems(data.productos[0].cantidad, data.productos[0].name);
         reciptPage.validarItems(data.productos[1].cantidad, data.productos[1].name);
-        reciptPage.validarTarjeta("0123456789101112");
+        reciptPage.validarTarjeta(data.comprador.tarjeta);
         reciptPage.validarPrecioTotal(data.productos[0].cantidad, data.productos[0].precioUnitario, data.productos[1].cantidad, data.productos[1].precioUnitario)
     });
 })

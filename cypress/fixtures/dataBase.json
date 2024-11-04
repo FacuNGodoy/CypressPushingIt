@@ -1,4 +1,9 @@
 {
+    "comprador": {
+        "nombre": "Facundo",
+        "apellido": "Godoy",
+        "tarjeta": "0123456789101112"
+    },
     "productos": [
         {
             "name": "Remera Negra",
@@ -6,9 +11,9 @@
             "precioUnitario": 7.12
         },
         {
-            "name": "Medias Negras",
+            "name": "Campera Negra",
             "cantidad": 1,
-            "precioUnitario": 5.43
+            "precioUnitario": 20.14
         }
     ]
 }
